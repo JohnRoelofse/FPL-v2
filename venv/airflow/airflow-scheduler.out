@@ -1,0 +1,114 @@
+[[34m2020-01-14 08:56:53,967[0m] {[34mscheduler_job.py:[0m1320} INFO[0m - Starting the scheduler[0m
+[[34m2020-01-14 08:56:53,968[0m] {[34mscheduler_job.py:[0m1328} INFO[0m - Running execute loop for -1 seconds[0m
+[[34m2020-01-14 08:56:53,969[0m] {[34mscheduler_job.py:[0m1329} INFO[0m - Processing each file at most -1 times[0m
+[[34m2020-01-14 08:56:53,969[0m] {[34mscheduler_job.py:[0m1332} INFO[0m - Searching for files in [1m/home/ubuntu/venv/airflow/dags[0m[0m
+[[34m2020-01-14 08:56:53,970[0m] {[34mscheduler_job.py:[0m1334} INFO[0m - There are 2 files in [1m/home/ubuntu/venv/airflow/dags[0m[0m
+[[34m2020-01-14 08:56:53,970[0m] {[34mscheduler_job.py:[0m1382} INFO[0m - Resetting orphaned tasks for active dag runs[0m
+[[34m2020-01-14 08:56:53,978[0m] {[34mdag_processing.py:[0m556} INFO[0m - Launched DagFileProcessorManager with pid: 29649[0m
+[[34m2020-01-14 08:56:53,984[0m] {[34msettings.py:[0m54} INFO[0m - Configured default timezone <Timezone [UTC]>[0m
+[2020-01-14 08:56:53,992] {dag_processing.py:760} ERROR - Cannot use more than 1 thread when using sqlite. Setting parallelism to 1
+[[34m2020-01-14 09:05:58,621[0m] {[34mscheduler_job.py:[0m927} INFO[0m - 1 tasks up for execution:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:05:56.175962+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:05:58,634[0m] {[34mscheduler_job.py:[0m958} INFO[0m - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued[0m
+[[34m2020-01-14 09:05:58,635[0m] {[34mscheduler_job.py:[0m986} INFO[0m - DAG [1minitial_build[0m has 0/16 running and queued tasks[0m
+[[34m2020-01-14 09:05:58,650[0m] {[34mscheduler_job.py:[0m1036} INFO[0m - Setting the following tasks to queued state:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:05:56.175962+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:05:58,666[0m] {[34mscheduler_job.py:[0m1112} INFO[0m - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:05:56.175962+00:00 [queued]>[0m[0m
+[[34m2020-01-14 09:05:58,666[0m] {[34mscheduler_job.py:[0m1148} INFO[0m - Sending [1m('initial_build', 'create_tables', datetime.datetime(2020, 1, 14, 9, 5, 56, 175962, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m[0m
+[[34m2020-01-14 09:05:58,666[0m] {[34mbase_executor.py:[0m59} INFO[0m - Adding to queue: [1m['airflow', 'run', 'initial_build', 'create_tables', '2020-01-14T09:05:56.175962+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[[34m2020-01-14 09:05:58,667[0m] {[34msequential_executor.py:[0m45} INFO[0m - Executing command: [1m['airflow', 'run', 'initial_build', 'create_tables', '2020-01-14T09:05:56.175962+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[2020-01-14 09:06:00,198] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-14 09:06:00,199] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-14 09:06:00,202] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:06:00,203] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): populate_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:06:00,215] {cli.py:545} INFO - Running <TaskInstance: initial_build.create_tables 2020-01-14T09:05:56.175962+00:00 [queued]> on host ip-172-31-19-44.us-west-2.compute.internal
+[[34m2020-01-14 09:06:10,399[0m] {[34mscheduler_job.py:[0m1288} INFO[0m - Executor reports execution of [1minitial_build[0m.[1mcreate_tables[0m execution_date=[1m2020-01-14 09:05:56.175962+00:00[0m exited with status [1msuccess[0m for try_number 1[0m
+[[34m2020-01-14 09:06:13,440[0m] {[34mscheduler_job.py:[0m927} INFO[0m - 1 tasks up for execution:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:05:56.175962+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:06:13,454[0m] {[34mscheduler_job.py:[0m958} INFO[0m - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued[0m
+[[34m2020-01-14 09:06:13,454[0m] {[34mscheduler_job.py:[0m986} INFO[0m - DAG [1minitial_build[0m has 0/16 running and queued tasks[0m
+[[34m2020-01-14 09:06:13,465[0m] {[34mscheduler_job.py:[0m1036} INFO[0m - Setting the following tasks to queued state:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:05:56.175962+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:06:13,484[0m] {[34mscheduler_job.py:[0m1112} INFO[0m - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:05:56.175962+00:00 [queued]>[0m[0m
+[[34m2020-01-14 09:06:13,484[0m] {[34mscheduler_job.py:[0m1148} INFO[0m - Sending [1m('initial_build', 'populate_tables', datetime.datetime(2020, 1, 14, 9, 5, 56, 175962, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 1 and queue [1mdefault[0m[0m
+[[34m2020-01-14 09:06:13,484[0m] {[34mbase_executor.py:[0m59} INFO[0m - Adding to queue: [1m['airflow', 'run', 'initial_build', 'populate_tables', '2020-01-14T09:05:56.175962+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[[34m2020-01-14 09:06:13,484[0m] {[34msequential_executor.py:[0m45} INFO[0m - Executing command: [1m['airflow', 'run', 'initial_build', 'populate_tables', '2020-01-14T09:05:56.175962+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[2020-01-14 09:06:14,864] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-14 09:06:14,864] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-14 09:06:14,867] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:06:14,868] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): populate_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:06:14,879] {cli.py:545} INFO - Running <TaskInstance: initial_build.populate_tables 2020-01-14T09:05:56.175962+00:00 [queued]> on host ip-172-31-19-44.us-west-2.compute.internal
+[[34m2020-01-14 09:06:25,065[0m] {[34mscheduler_job.py:[0m1288} INFO[0m - Executor reports execution of [1minitial_build[0m.[1mpopulate_tables[0m execution_date=[1m2020-01-14 09:05:56.175962+00:00[0m exited with status [1msuccess[0m for try_number 1[0m
+[[34m2020-01-14 09:09:12,287[0m] {[34mscheduler_job.py:[0m927} INFO[0m - 1 tasks up for execution:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:09:09.210412+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:09:12,301[0m] {[34mscheduler_job.py:[0m958} INFO[0m - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued[0m
+[[34m2020-01-14 09:09:12,301[0m] {[34mscheduler_job.py:[0m986} INFO[0m - DAG [1minitial_build[0m has 0/16 running and queued tasks[0m
+[[34m2020-01-14 09:09:12,315[0m] {[34mscheduler_job.py:[0m1036} INFO[0m - Setting the following tasks to queued state:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:09:09.210412+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:09:12,330[0m] {[34mscheduler_job.py:[0m1112} INFO[0m - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:09:09.210412+00:00 [queued]>[0m[0m
+[[34m2020-01-14 09:09:12,330[0m] {[34mscheduler_job.py:[0m1148} INFO[0m - Sending [1m('initial_build', 'create_tables', datetime.datetime(2020, 1, 14, 9, 9, 9, 210412, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m[0m
+[[34m2020-01-14 09:09:12,330[0m] {[34mbase_executor.py:[0m59} INFO[0m - Adding to queue: [1m['airflow', 'run', 'initial_build', 'create_tables', '2020-01-14T09:09:09.210412+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[[34m2020-01-14 09:09:12,331[0m] {[34msequential_executor.py:[0m45} INFO[0m - Executing command: [1m['airflow', 'run', 'initial_build', 'create_tables', '2020-01-14T09:09:09.210412+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[2020-01-14 09:09:13,689] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-14 09:09:13,690] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-14 09:09:13,693] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:09:13,693] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): populate_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:09:13,704] {cli.py:545} INFO - Running <TaskInstance: initial_build.create_tables 2020-01-14T09:09:09.210412+00:00 [queued]> on host ip-172-31-19-44.us-west-2.compute.internal
+[[34m2020-01-14 09:09:24,124[0m] {[34mscheduler_job.py:[0m1288} INFO[0m - Executor reports execution of [1minitial_build[0m.[1mcreate_tables[0m execution_date=[1m2020-01-14 09:09:09.210412+00:00[0m exited with status [1msuccess[0m for try_number 1[0m
+[[34m2020-01-14 09:09:27,169[0m] {[34mscheduler_job.py:[0m927} INFO[0m - 1 tasks up for execution:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:09:09.210412+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:09:27,180[0m] {[34mscheduler_job.py:[0m958} INFO[0m - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued[0m
+[[34m2020-01-14 09:09:27,180[0m] {[34mscheduler_job.py:[0m986} INFO[0m - DAG [1minitial_build[0m has 0/16 running and queued tasks[0m
+[[34m2020-01-14 09:09:27,189[0m] {[34mscheduler_job.py:[0m1036} INFO[0m - Setting the following tasks to queued state:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:09:09.210412+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:09:27,203[0m] {[34mscheduler_job.py:[0m1112} INFO[0m - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:09:09.210412+00:00 [queued]>[0m[0m
+[[34m2020-01-14 09:09:27,204[0m] {[34mscheduler_job.py:[0m1148} INFO[0m - Sending [1m('initial_build', 'populate_tables', datetime.datetime(2020, 1, 14, 9, 9, 9, 210412, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 1 and queue [1mdefault[0m[0m
+[[34m2020-01-14 09:09:27,204[0m] {[34mbase_executor.py:[0m59} INFO[0m - Adding to queue: [1m['airflow', 'run', 'initial_build', 'populate_tables', '2020-01-14T09:09:09.210412+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[[34m2020-01-14 09:09:27,204[0m] {[34msequential_executor.py:[0m45} INFO[0m - Executing command: [1m['airflow', 'run', 'initial_build', 'populate_tables', '2020-01-14T09:09:09.210412+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[2020-01-14 09:09:28,576] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-14 09:09:28,577] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-14 09:09:28,579] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:09:28,580] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): populate_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:09:28,590] {cli.py:545} INFO - Running <TaskInstance: initial_build.populate_tables 2020-01-14T09:09:09.210412+00:00 [queued]> on host ip-172-31-19-44.us-west-2.compute.internal
+[[34m2020-01-14 09:09:38,764[0m] {[34mscheduler_job.py:[0m1288} INFO[0m - Executor reports execution of [1minitial_build[0m.[1mpopulate_tables[0m execution_date=[1m2020-01-14 09:09:09.210412+00:00[0m exited with status [1msuccess[0m for try_number 1[0m
+[[34m2020-01-14 09:10:57,885[0m] {[34mscheduler_job.py:[0m927} INFO[0m - 1 tasks up for execution:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:10:54.568909+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:10:57,900[0m] {[34mscheduler_job.py:[0m958} INFO[0m - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued[0m
+[[34m2020-01-14 09:10:57,901[0m] {[34mscheduler_job.py:[0m986} INFO[0m - DAG [1minitial_build[0m has 0/16 running and queued tasks[0m
+[[34m2020-01-14 09:10:57,907[0m] {[34mscheduler_job.py:[0m1036} INFO[0m - Setting the following tasks to queued state:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:10:54.568909+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:10:57,922[0m] {[34mscheduler_job.py:[0m1112} INFO[0m - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: initial_build.create_tables 2020-01-14 09:10:54.568909+00:00 [queued]>[0m[0m
+[[34m2020-01-14 09:10:57,923[0m] {[34mscheduler_job.py:[0m1148} INFO[0m - Sending [1m('initial_build', 'create_tables', datetime.datetime(2020, 1, 14, 9, 10, 54, 568909, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m[0m
+[[34m2020-01-14 09:10:57,923[0m] {[34mbase_executor.py:[0m59} INFO[0m - Adding to queue: [1m['airflow', 'run', 'initial_build', 'create_tables', '2020-01-14T09:10:54.568909+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[[34m2020-01-14 09:10:57,923[0m] {[34msequential_executor.py:[0m45} INFO[0m - Executing command: [1m['airflow', 'run', 'initial_build', 'create_tables', '2020-01-14T09:10:54.568909+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[2020-01-14 09:10:59,245] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-14 09:10:59,246] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-14 09:10:59,248] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:10:59,249] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): populate_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:10:59,260] {cli.py:545} INFO - Running <TaskInstance: initial_build.create_tables 2020-01-14T09:10:54.568909+00:00 [queued]> on host ip-172-31-19-44.us-west-2.compute.internal
+[[34m2020-01-14 09:11:09,455[0m] {[34mscheduler_job.py:[0m1288} INFO[0m - Executor reports execution of [1minitial_build[0m.[1mcreate_tables[0m execution_date=[1m2020-01-14 09:10:54.568909+00:00[0m exited with status [1msuccess[0m for try_number 1[0m
+[[34m2020-01-14 09:11:12,503[0m] {[34mscheduler_job.py:[0m927} INFO[0m - 1 tasks up for execution:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:10:54.568909+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:11:12,512[0m] {[34mscheduler_job.py:[0m958} INFO[0m - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued[0m
+[[34m2020-01-14 09:11:12,513[0m] {[34mscheduler_job.py:[0m986} INFO[0m - DAG [1minitial_build[0m has 0/16 running and queued tasks[0m
+[[34m2020-01-14 09:11:12,521[0m] {[34mscheduler_job.py:[0m1036} INFO[0m - Setting the following tasks to queued state:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:10:54.568909+00:00 [scheduled]>[0m[0m
+[[34m2020-01-14 09:11:12,536[0m] {[34mscheduler_job.py:[0m1112} INFO[0m - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: initial_build.populate_tables 2020-01-14 09:10:54.568909+00:00 [queued]>[0m[0m
+[[34m2020-01-14 09:11:12,537[0m] {[34mscheduler_job.py:[0m1148} INFO[0m - Sending [1m('initial_build', 'populate_tables', datetime.datetime(2020, 1, 14, 9, 10, 54, 568909, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 1 and queue [1mdefault[0m[0m
+[[34m2020-01-14 09:11:12,537[0m] {[34mbase_executor.py:[0m59} INFO[0m - Adding to queue: [1m['airflow', 'run', 'initial_build', 'populate_tables', '2020-01-14T09:10:54.568909+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[[34m2020-01-14 09:11:12,537[0m] {[34msequential_executor.py:[0m45} INFO[0m - Executing command: [1m['airflow', 'run', 'initial_build', 'populate_tables', '2020-01-14T09:10:54.568909+00:00', '--local', '--pool', 'default_pool', '-sd', '/home/ubuntu/venv/airflow/dags/initial_build.py'][0m[0m
+[2020-01-14 09:11:13,916] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-14 09:11:13,917] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-14 09:11:13,919] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:11:13,920] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): populate_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-14 09:11:13,940] {cli.py:545} INFO - Running <TaskInstance: initial_build.populate_tables 2020-01-14T09:10:54.568909+00:00 [queued]> on host ip-172-31-19-44.us-west-2.compute.internal
+[[34m2020-01-14 09:11:24,116[0m] {[34mscheduler_job.py:[0m1288} INFO[0m - Executor reports execution of [1minitial_build[0m.[1mpopulate_tables[0m execution_date=[1m2020-01-14 09:10:54.568909+00:00[0m exited with status [1msuccess[0m for try_number 1[0m
+[[34m2020-01-14 09:45:02,583[0m] {[34mhelpers.py:[0m308} INFO[0m - Sending Signals.SIGTERM to GPID 29649[0m
+[[34m2020-01-14 09:45:02,588[0m] {[34mhelpers.py:[0m286} INFO[0m - Process [1mpsutil.Process(pid=29649, status='terminated')[0m (29649) terminated with exit code 0[0m
+[[34m2020-01-14 09:45:02,589[0m] {[34mscheduler_job.py:[0m1361} INFO[0m - Exited execute loop[0m

@@ -1,0 +1,19 @@
+[2019-12-29 18:39:44,031] {taskinstance.py:630} INFO - Dependencies all met for <TaskInstance: initial_build.initial_build 2019-02-19T00:00:00+00:00 [queued]>
+[2019-12-29 18:39:44,039] {taskinstance.py:630} INFO - Dependencies all met for <TaskInstance: initial_build.initial_build 2019-02-19T00:00:00+00:00 [queued]>
+[2019-12-29 18:39:44,039] {taskinstance.py:841} INFO - 
+--------------------------------------------------------------------------------
+[2019-12-29 18:39:44,039] {taskinstance.py:842} INFO - Starting attempt 1 of 1
+[2019-12-29 18:39:44,039] {taskinstance.py:843} INFO - 
+--------------------------------------------------------------------------------
+[2019-12-29 18:39:44,057] {taskinstance.py:862} INFO - Executing <Task(PythonOperator): initial_build> on 2019-02-19T00:00:00+00:00
+[2019-12-29 18:39:44,057] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'initial_build', 'initial_build', '2019-02-19T00:00:00+00:00', '--job_id', '92', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/initial_build.py', '--cfg_path', '/tmp/tmpl5gsvhs9']
+[2019-12-29 18:39:45,085] {base_task_runner.py:115} INFO - Job 92: Subtask initial_build [2019-12-29 18:39:45,084] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-12-29 18:39:45,086] {base_task_runner.py:115} INFO - Job 92: Subtask initial_build [2019-12-29 18:39:45,085] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2019-12-29 18:39:45,088] {base_task_runner.py:115} INFO - Job 92: Subtask initial_build [2019-12-29 18:39:45,088] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): initial_build>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2019-12-29 18:39:45,099] {base_task_runner.py:115} INFO - Job 92: Subtask initial_build [2019-12-29 18:39:45,098] {cli.py:545} INFO - Running <TaskInstance: initial_build.initial_build 2019-02-19T00:00:00+00:00 [running]> on host ip-172-31-19-44.us-west-2.compute.internal
+[2019-12-29 18:39:45,106] {python_operator.py:105} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=initial_build
+AIRFLOW_CTX_TASK_ID=initial_build
+AIRFLOW_CTX_EXECUTION_DATE=2019-02-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-02-19T00:00:00+00:00
+[2019-12-29 18:39:45,208] {python_operator.py:114} INFO - Done. Returned value was: None

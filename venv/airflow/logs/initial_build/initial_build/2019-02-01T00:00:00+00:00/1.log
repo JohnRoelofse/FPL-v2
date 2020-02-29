@@ -1,0 +1,20 @@
+[2019-12-29 18:35:25,447] {taskinstance.py:630} INFO - Dependencies all met for <TaskInstance: initial_build.initial_build 2019-02-01T00:00:00+00:00 [queued]>
+[2019-12-29 18:35:25,456] {taskinstance.py:630} INFO - Dependencies all met for <TaskInstance: initial_build.initial_build 2019-02-01T00:00:00+00:00 [queued]>
+[2019-12-29 18:35:25,456] {taskinstance.py:841} INFO - 
+--------------------------------------------------------------------------------
+[2019-12-29 18:35:25,456] {taskinstance.py:842} INFO - Starting attempt 1 of 1
+[2019-12-29 18:35:25,456] {taskinstance.py:843} INFO - 
+--------------------------------------------------------------------------------
+[2019-12-29 18:35:25,473] {taskinstance.py:862} INFO - Executing <Task(PythonOperator): initial_build> on 2019-02-01T00:00:00+00:00
+[2019-12-29 18:35:25,473] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'initial_build', 'initial_build', '2019-02-01T00:00:00+00:00', '--job_id', '74', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/initial_build.py', '--cfg_path', '/tmp/tmp2399fvft']
+[2019-12-29 18:35:26,493] {base_task_runner.py:115} INFO - Job 74: Subtask initial_build [2019-12-29 18:35:26,492] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-12-29 18:35:26,493] {base_task_runner.py:115} INFO - Job 74: Subtask initial_build [2019-12-29 18:35:26,493] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2019-12-29 18:35:26,507] {base_task_runner.py:115} INFO - Job 74: Subtask initial_build [2019-12-29 18:35:26,506] {cli.py:545} INFO - Running <TaskInstance: initial_build.initial_build 2019-02-01T00:00:00+00:00 [running]> on host ip-172-31-19-44.us-west-2.compute.internal
+[2019-12-29 18:35:26,514] {python_operator.py:105} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=initial_build
+AIRFLOW_CTX_TASK_ID=initial_build
+AIRFLOW_CTX_EXECUTION_DATE=2019-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-02-01T00:00:00+00:00
+[2019-12-29 18:35:26,700] {python_operator.py:114} INFO - Done. Returned value was: None
+[2019-12-29 18:35:30,438] {logging_mixin.py:112} INFO - [2019-12-29 18:35:30,438] {local_task_job.py:124} WARNING - Time since last heartbeat(0.00 s) < heartrate(5.0 s), sleeping for 4.995809 s
+[2019-12-29 18:35:35,440] {logging_mixin.py:112} INFO - [2019-12-29 18:35:35,439] {local_task_job.py:103} INFO - Task exited with return code 0

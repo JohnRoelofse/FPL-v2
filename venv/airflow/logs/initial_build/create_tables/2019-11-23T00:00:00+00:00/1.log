@@ -1,0 +1,22 @@
+[2020-01-10 17:04:26,444] {taskinstance.py:630} INFO - Dependencies all met for <TaskInstance: initial_build.create_tables 2019-11-23T00:00:00+00:00 [queued]>
+[2020-01-10 17:04:26,452] {taskinstance.py:630} INFO - Dependencies all met for <TaskInstance: initial_build.create_tables 2019-11-23T00:00:00+00:00 [queued]>
+[2020-01-10 17:04:26,453] {taskinstance.py:841} INFO - 
+--------------------------------------------------------------------------------
+[2020-01-10 17:04:26,453] {taskinstance.py:842} INFO - Starting attempt 1 of 1
+[2020-01-10 17:04:26,453] {taskinstance.py:843} INFO - 
+--------------------------------------------------------------------------------
+[2020-01-10 17:04:26,469] {taskinstance.py:862} INFO - Executing <Task(PythonOperator): create_tables> on 2019-11-23T00:00:00+00:00
+[2020-01-10 17:04:26,469] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'initial_build', 'create_tables', '2019-11-23T00:00:00+00:00', '--job_id', '591', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/initial_build.py', '--cfg_path', '/tmp/tmpgwdsul05']
+[2020-01-10 17:04:27,500] {base_task_runner.py:115} INFO - Job 591: Subtask create_tables [2020-01-10 17:04:27,499] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2020-01-10 17:04:27,501] {base_task_runner.py:115} INFO - Job 591: Subtask create_tables [2020-01-10 17:04:27,501] {dagbag.py:92} INFO - Filling up the DagBag from /home/ubuntu/venv/airflow/dags/initial_build.py
+[2020-01-10 17:04:27,504] {base_task_runner.py:115} INFO - Job 591: Subtask create_tables [2020-01-10 17:04:27,503] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): create_tables>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-10 17:04:27,505] {base_task_runner.py:115} INFO - Job 591: Subtask create_tables [2020-01-10 17:04:27,504] {baseoperator.py:354} WARNING - schedule_interval is used for <Task(PythonOperator): initial_build>, though it has been deprecated as a task parameter, you need to specify it as a DAG parameter instead
+[2020-01-10 17:04:27,516] {base_task_runner.py:115} INFO - Job 591: Subtask create_tables [2020-01-10 17:04:27,515] {cli.py:545} INFO - Running <TaskInstance: initial_build.create_tables 2019-11-23T00:00:00+00:00 [running]> on host ip-172-31-19-44.us-west-2.compute.internal
+[2020-01-10 17:04:27,523] {python_operator.py:105} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=initial_build
+AIRFLOW_CTX_TASK_ID=create_tables
+AIRFLOW_CTX_EXECUTION_DATE=2019-11-23T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-11-23T00:00:00+00:00
+[2020-01-10 17:04:27,593] {python_operator.py:114} INFO - Done. Returned value was: None
+[2020-01-10 17:04:31,435] {logging_mixin.py:112} INFO - [2020-01-10 17:04:31,434] {local_task_job.py:124} WARNING - Time since last heartbeat(0.00 s) < heartrate(5.0 s), sleeping for 4.995917 s
+[2020-01-10 17:04:36,437] {logging_mixin.py:112} INFO - [2020-01-10 17:04:36,436] {local_task_job.py:103} INFO - Task exited with return code 0
